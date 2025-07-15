@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		0AA13FEA2E26BAD40015AB3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AA13FCB2E26BAD10015AB3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AA13FD22E26BAD10015AB3C;
+			remoteInfo = VOYATEKTRIP;
+		};
+		0AA13FF42E26BAD40015AB3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AA13FCB2E26BAD10015AB3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AA13FD22E26BAD10015AB3C;
+			remoteInfo = VOYATEKTRIP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AA13FD32E26BAD10015AB3C /* VOYATEKTRIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOYATEKTRIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA13FE92E26BAD40015AB3C /* VOYATEKTRIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VOYATEKTRIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA13FF32E26BAD40015AB3C /* VOYATEKTRIPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VOYATEKTRIPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0AA13FFB2E26BAD40015AB3C /* Exceptions for "VOYATEKTRIP" folder in "VOYATEKTRIP" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0AA13FD22E26BAD10015AB3C /* VOYATEKTRIP */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0AA13FD52E26BAD10015AB3C /* VOYATEKTRIP */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0AA13FFB2E26BAD40015AB3C /* Exceptions for "VOYATEKTRIP" folder in "VOYATEKTRIP" target */,
+			);
+			path = VOYATEKTRIP;
+			sourceTree = "<group>";
+		};
+		0AA13FEC2E26BAD40015AB3C /* VOYATEKTRIPTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VOYATEKTRIPTests;
+			sourceTree = "<group>";
+		};
+		0AA13FF62E26BAD40015AB3C /* VOYATEKTRIPUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VOYATEKTRIPUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AA13FD02E26BAD10015AB3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA13FE62E26BAD40015AB3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA13FF02E26BAD40015AB3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AA13FCA2E26BAD10015AB3C = {
+			isa = PBXGroup;
+			children = (
+				0AA13FD52E26BAD10015AB3C /* VOYATEKTRIP */,
+				0AA13FEC2E26BAD40015AB3C /* VOYATEKTRIPTests */,
+				0AA13FF62E26BAD40015AB3C /* VOYATEKTRIPUITests */,
+				0AA13FD42E26BAD10015AB3C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AA13FD42E26BAD10015AB3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AA13FD32E26BAD10015AB3C /* VOYATEKTRIP.app */,
+				0AA13FE92E26BAD40015AB3C /* VOYATEKTRIPTests.xctest */,
+				0AA13FF32E26BAD40015AB3C /* VOYATEKTRIPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AA13FD22E26BAD10015AB3C /* VOYATEKTRIP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA13FFC2E26BAD40015AB3C /* Build configuration list for PBXNativeTarget "VOYATEKTRIP" */;
+			buildPhases = (
+				0AA13FCF2E26BAD10015AB3C /* Sources */,
+				0AA13FD02E26BAD10015AB3C /* Frameworks */,
+				0AA13FD12E26BAD10015AB3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0AA13FD52E26BAD10015AB3C /* VOYATEKTRIP */,
+			);
+			name = VOYATEKTRIP;
+			packageProductDependencies = (
+			);
+			productName = VOYATEKTRIP;
+			productReference = 0AA13FD32E26BAD10015AB3C /* VOYATEKTRIP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0AA13FE82E26BAD40015AB3C /* VOYATEKTRIPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA140012E26BAD40015AB3C /* Build configuration list for PBXNativeTarget "VOYATEKTRIPTests" */;
+			buildPhases = (
+				0AA13FE52E26BAD40015AB3C /* Sources */,
+				0AA13FE62E26BAD40015AB3C /* Frameworks */,
+				0AA13FE72E26BAD40015AB3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AA13FEB2E26BAD40015AB3C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0AA13FEC2E26BAD40015AB3C /* VOYATEKTRIPTests */,
+			);
+			name = VOYATEKTRIPTests;
+			packageProductDependencies = (
+			);
+			productName = VOYATEKTRIPTests;
+			productReference = 0AA13FE92E26BAD40015AB3C /* VOYATEKTRIPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0AA13FF22E26BAD40015AB3C /* VOYATEKTRIPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA140042E26BAD40015AB3C /* Build configuration list for PBXNativeTarget "VOYATEKTRIPUITests" */;
+			buildPhases = (
+				0AA13FEF2E26BAD40015AB3C /* Sources */,
+				0AA13FF02E26BAD40015AB3C /* Frameworks */,
+				0AA13FF12E26BAD40015AB3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AA13FF52E26BAD40015AB3C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0AA13FF62E26BAD40015AB3C /* VOYATEKTRIPUITests */,
+			);
+			name = VOYATEKTRIPUITests;
+			packageProductDependencies = (
+			);
+			productName = VOYATEKTRIPUITests;
+			productReference = 0AA13FF32E26BAD40015AB3C /* VOYATEKTRIPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AA13FCB2E26BAD10015AB3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					0AA13FD22E26BAD10015AB3C = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					0AA13FE82E26BAD40015AB3C = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 0AA13FD22E26BAD10015AB3C;
+					};
+					0AA13FF22E26BAD40015AB3C = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 0AA13FD22E26BAD10015AB3C;
+					};
+				};
+			};
+			buildConfigurationList = 0AA13FCE2E26BAD10015AB3C /* Build configuration list for PBXProject "VOYATEKTRIP" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AA13FCA2E26BAD10015AB3C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0AA13FD42E26BAD10015AB3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AA13FD22E26BAD10015AB3C /* VOYATEKTRIP */,
+				0AA13FE82E26BAD40015AB3C /* VOYATEKTRIPTests */,
+				0AA13FF22E26BAD40015AB3C /* VOYATEKTRIPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AA13FD12E26BAD10015AB3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA13FE72E26BAD40015AB3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA13FF12E26BAD40015AB3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AA13FCF2E26BAD10015AB3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA13FE52E26BAD40015AB3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA13FEF2E26BAD40015AB3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AA13FEB2E26BAD40015AB3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AA13FD22E26BAD10015AB3C /* VOYATEKTRIP */;
+			targetProxy = 0AA13FEA2E26BAD40015AB3C /* PBXContainerItemProxy */;
+		};
+		0AA13FF52E26BAD40015AB3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AA13FD22E26BAD10015AB3C /* VOYATEKTRIP */;
+			targetProxy = 0AA13FF42E26BAD40015AB3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AA13FFD2E26BAD40015AB3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WN5G3C7B9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VOYATEKTRIP/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emmanuel.VOYATEKTRIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AA13FFE2E26BAD40015AB3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WN5G3C7B9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VOYATEKTRIP/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emmanuel.VOYATEKTRIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0AA13FFF2E26BAD40015AB3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = WN5G3C7B9B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0AA140002E26BAD40015AB3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WN5G3C7B9B;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0AA140022E26BAD40015AB3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WN5G3C7B9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emmanuel.VOYATEKTRIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VOYATEKTRIP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VOYATEKTRIP";
+			};
+			name = Debug;
+		};
+		0AA140032E26BAD40015AB3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WN5G3C7B9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emmanuel.VOYATEKTRIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VOYATEKTRIP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VOYATEKTRIP";
+			};
+			name = Release;
+		};
+		0AA140052E26BAD40015AB3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WN5G3C7B9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emmanuel.VOYATEKTRIPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VOYATEKTRIP;
+			};
+			name = Debug;
+		};
+		0AA140062E26BAD40015AB3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WN5G3C7B9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emmanuel.VOYATEKTRIPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VOYATEKTRIP;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AA13FCE2E26BAD10015AB3C /* Build configuration list for PBXProject "VOYATEKTRIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA13FFF2E26BAD40015AB3C /* Debug */,
+				0AA140002E26BAD40015AB3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA13FFC2E26BAD40015AB3C /* Build configuration list for PBXNativeTarget "VOYATEKTRIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA13FFD2E26BAD40015AB3C /* Debug */,
+				0AA13FFE2E26BAD40015AB3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA140012E26BAD40015AB3C /* Build configuration list for PBXNativeTarget "VOYATEKTRIPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA140022E26BAD40015AB3C /* Debug */,
+				0AA140032E26BAD40015AB3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA140042E26BAD40015AB3C /* Build configuration list for PBXNativeTarget "VOYATEKTRIPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA140052E26BAD40015AB3C /* Debug */,
+				0AA140062E26BAD40015AB3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AA13FCB2E26BAD10015AB3C /* Project object */;
+}
