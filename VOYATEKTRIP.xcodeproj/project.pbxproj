@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0AA140282E26D4120015AB3C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0AA140272E26D4120015AB3C /* IQKeyboardManagerSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0AA13FEA2E26BAD40015AB3C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -34,28 +38,50 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				"Shared/UIView+extensions.swift",
+				Tests/VOYATEKTRIPTests/VOYATEKTRIPTests.swift,
+				Tests/VOYATEKTRIPUITests/VOYATEKTRIPUITests.swift,
+				Tests/VOYATEKTRIPUITests/VOYATEKTRIPUITestsLaunchTests.swift,
 			);
 			target = 0AA13FD22E26BAD10015AB3C /* VOYATEKTRIP */;
 		};
+		0AA140152E26BF470015AB3C /* Exceptions for "VOYATEKTRIP" folder in "VOYATEKTRIPTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/VOYATEKTRIPTests/VOYATEKTRIPTests.swift,
+			);
+			target = 0AA13FE82E26BAD40015AB3C /* VOYATEKTRIPTests */;
+		};
+		0AA1401B2E26BF4C0015AB3C /* Exceptions for "VOYATEKTRIP" folder in "VOYATEKTRIPUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/VOYATEKTRIPUITests/VOYATEKTRIPUITests.swift,
+				Tests/VOYATEKTRIPUITests/VOYATEKTRIPUITestsLaunchTests.swift,
+			);
+			target = 0AA13FF22E26BAD40015AB3C /* VOYATEKTRIPUITests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		E9AA89F92E2714D200970FF0 /* Exceptions for "VOYATEKTRIP" folder in "Copy Bundle Resources" phase from "VOYATEKTRIP" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 0AA13FD12E26BAD10015AB3C /* Resources */;
+			membershipExceptions = (
+				"Shared/UIView+extensions.swift",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0AA13FD52E26BAD10015AB3C /* VOYATEKTRIP */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				0AA13FFB2E26BAD40015AB3C /* Exceptions for "VOYATEKTRIP" folder in "VOYATEKTRIP" target */,
+				E9AA89F92E2714D200970FF0 /* Exceptions for "VOYATEKTRIP" folder in "Copy Bundle Resources" phase from "VOYATEKTRIP" target */,
+				0AA140152E26BF470015AB3C /* Exceptions for "VOYATEKTRIP" folder in "VOYATEKTRIPTests" target */,
+				0AA1401B2E26BF4C0015AB3C /* Exceptions for "VOYATEKTRIP" folder in "VOYATEKTRIPUITests" target */,
 			);
 			path = VOYATEKTRIP;
-			sourceTree = "<group>";
-		};
-		0AA13FEC2E26BAD40015AB3C /* VOYATEKTRIPTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VOYATEKTRIPTests;
-			sourceTree = "<group>";
-		};
-		0AA13FF62E26BAD40015AB3C /* VOYATEKTRIPUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VOYATEKTRIPUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -65,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA140282E26D4120015AB3C /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				0AA13FD52E26BAD10015AB3C /* VOYATEKTRIP */,
-				0AA13FEC2E26BAD40015AB3C /* VOYATEKTRIPTests */,
-				0AA13FF62E26BAD40015AB3C /* VOYATEKTRIPUITests */,
 				0AA13FD42E26BAD10015AB3C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +150,7 @@
 			);
 			name = VOYATEKTRIP;
 			packageProductDependencies = (
+				0AA140272E26D4120015AB3C /* IQKeyboardManagerSwift */,
 			);
 			productName = VOYATEKTRIP;
 			productReference = 0AA13FD32E26BAD10015AB3C /* VOYATEKTRIP.app */;
@@ -142,9 +168,6 @@
 			);
 			dependencies = (
 				0AA13FEB2E26BAD40015AB3C /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				0AA13FEC2E26BAD40015AB3C /* VOYATEKTRIPTests */,
 			);
 			name = VOYATEKTRIPTests;
 			packageProductDependencies = (
@@ -165,9 +188,6 @@
 			);
 			dependencies = (
 				0AA13FF52E26BAD40015AB3C /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				0AA13FF62E26BAD40015AB3C /* VOYATEKTRIPUITests */,
 			);
 			name = VOYATEKTRIPUITests;
 			packageProductDependencies = (
@@ -208,6 +228,9 @@
 			);
 			mainGroup = 0AA13FCA2E26BAD10015AB3C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0AA140262E26D4120015AB3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0AA13FD42E26BAD10015AB3C /* Products */;
 			projectDirPath = "";
@@ -571,6 +594,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0AA140262E26D4120015AB3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0AA140272E26D4120015AB3C /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AA140262E26D4120015AB3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0AA13FCB2E26BAD10015AB3C /* Project object */;
 }
