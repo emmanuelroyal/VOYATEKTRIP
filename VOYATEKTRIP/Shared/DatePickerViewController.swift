@@ -50,6 +50,7 @@ class DatePickerViewController: UIViewController {
         view.backgroundColor = .systemBackground
 
         datePicker.date = initialDate
+        datePicker.minimumDate = initialDate
         view.addSubview(datePicker)
 
         doneButton.setTitle(dateType.buttonTitle, for: .normal)

@@ -126,9 +126,9 @@ class TripDetailViewController: UIViewController {
         stack.addArrangedSubview(activitiesStack)
 
         let cards: [(String, String, UIColor, String, Bool)] = [
-            ("Activities", "Build, personalize, and explore your itinerary with our trip planner.", UIColor(red: 0.05, green: 0.1, blue: 0.4, alpha: 1), "Add Activity", false ),
-            ("Hotels", "Build, personalize, and explore your itinerary with our trip planner.", UIColor.bgLightBlue, "Add Hotel", true),
-            ("Flights", "Build, personalize, and explore your itinerary with our trip planner.", UIColor.systemBlue, "Add Flight", false)
+            ("Activities", "Build, personalize, and explore your itinerary with our trip planner.", UIColor(red: 0.05, green: 0.1, blue: 0.4, alpha: 1), "Add Activities", false ),
+            ("Hotels", "Build, personalize, and explore your itinerary with our trip planner.", UIColor.bgLightBlue, "Add Hotels", true),
+            ("Flights", "Build, personalize, and explore your itinerary with our trip planner.", UIColor.systemBlue, "Add Flights", false)
         ]
 
         for (title, message, color, buttonTitle, labelColor) in cards {

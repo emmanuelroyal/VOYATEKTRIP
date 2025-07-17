@@ -35,10 +35,10 @@ class CreateTripViewController: UIViewController {
     private let tripNameStack = UIStackView()
     private let travelStyleStack = UIStackView()
     private let descriptionStack = UIStackView()
+    private let mainStackView = UIStackView()
 
     private let travelStyles = TravelStyleEnum.allCases.map { $0.rawValue }
 
-    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,84 +52,118 @@ class CreateTripViewController: UIViewController {
 
    private extension CreateTripViewController {
     
-    func setupUI() {
-        // ScrollView hierarchy
-        view.addSubview(scrollView)
-        scrollView.addSubview(contentView)
-        contentView.addSubview(containerView)
+       func setupUI() {
+           view.addSubview(scrollView)
+           scrollView.addSubview(contentView)
+           contentView.addSubview(mainStackView)
 
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.translatesAutoresizingMaskIntoConstraints = false
+           scrollView.translatesAutoresizingMaskIntoConstraints = false
+           contentView.translatesAutoresizingMaskIntoConstraints = false
+           mainStackView.translatesAutoresizingMaskIntoConstraints = false
 
-        containerView.backgroundColor = .white
-        containerView.layer.cornerRadius = 16
-        containerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        containerView.layer.shadowColor = UIColor.black.cgColor
-        containerView.layer.shadowOpacity = 0.1
-        containerView.layer.shadowRadius = 10
+           scrollView.keyboardDismissMode = .interactive
+           mainStackView.axis = .vertical
+           mainStackView.spacing = 24
+           mainStackView.alignment = .fill
+           mainStackView.distribution = .fill
 
-        closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
-        closeButton.tintColor = .black
-        closeButton.addTarget(self, action: #selector(dismissSelf), for: .touchUpInside)
+           // Basic layout config
+           view.backgroundColor = .white
 
-        iconImageView.image = UIImage(named: "treepalm.icon") ?? UIImage(systemName: "airplane")
-        iconImageView.contentMode = .scaleAspectFit
-        iconImageView.tintColor = .systemBlue
-        iconImageView.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.1)
-        iconImageView.layer.cornerRadius = 8
-        iconImageView.clipsToBounds = true
+           closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+           closeButton.tintColor = .black
+           closeButton.contentHorizontalAlignment = .right
+           closeButton.addTarget(self, action: #selector(dismissSelf), for: .touchUpInside)
 
-        titleLabel.text = "Create a Trip"
-        titleLabel.font = .boldSystemFont(ofSize: 22)
+           iconImageView.image = UIImage(named: "treepalm.icon") ?? UIImage(systemName: "airplane.circle")
+           iconImageView.contentMode = .scaleAspectFit
+           iconImageView.tintColor = .systemBlue
+           iconImageView.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.1)
+           iconImageView.layer.cornerRadius = 8
+           iconImageView.clipsToBounds = true
+           iconImageView.heightAnchor.constraint(equalToConstant: 44).isActive = true
 
-        subtitleLabel.text = "Let's Go! Build Your Next Adventure"
-        subtitleLabel.font = .systemFont(ofSize: 14)
-        subtitleLabel.textColor = .gray
+           let iconStack = UIStackView()
+           iconStack.axis = .horizontal
+           iconStack.alignment = .center
+           iconStack.distribution = .fill
+           iconStack.spacing = 0
 
-        tripNameField.placeholder = "Enter the trip name"
-        tripNameField.borderStyle = .roundedRect
-        tripNameField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+           let spacer = UIView()
+           spacer.setContentHuggingPriority(.defaultLow, for: .horizontal)
+           spacer.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 
-        setupTravelStyleButton()
+           iconImageView.widthAnchor.constraint(equalToConstant: 44).isActive = true
+           iconImageView.heightAnchor.constraint(equalToConstant: 44).isActive = true
+           
+           iconStack.addArrangedSubview(iconImageView)
+           iconStack.addArrangedSubview(spacer)
+           
+           
+           titleLabel.text = "Create a Trip"
+           titleLabel.font = .boldSystemFont(ofSize: 22)
 
-        tripDescriptionView.layer.borderColor = UIColor.systemGray4.cgColor
-        tripDescriptionView.layer.borderWidth = 1
-        tripDescriptionView.layer.cornerRadius = 8
-        tripDescriptionView.text = "Tell us more about the trip"
-        tripDescriptionView.textColor = .placeholderText
-        tripDescriptionView.font = .systemFont(ofSize: 16)
-        tripDescriptionView.delegate = self
+           subtitleLabel.text = "Let's Go! Build Your Next Adventure"
+           subtitleLabel.font = .systemFont(ofSize: 14)
+           subtitleLabel.textColor = .gray
 
-        tripNameStack.axis = .vertical
-        tripNameStack.spacing = 6
-        tripNameStack.addArrangedSubview(makeInputLabel(text: "Trip Name"))
-        tripNameStack.addArrangedSubview(tripNameField)
+           tripNameField.placeholder = "Enter the trip name"
+           tripNameField.borderStyle = .roundedRect
+           tripNameField.heightAnchor.constraint(equalToConstant: 44).isActive = true
+           tripNameField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
 
-        travelStyleStack.axis = .vertical
-        travelStyleStack.spacing = 6
-        travelStyleStack.addArrangedSubview(makeInputLabel(text: "Travel Style"))
-        travelStyleStack.addArrangedSubview(travelStyleButton)
+           setupTravelStyleButton()
+           travelStyleButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
 
-        descriptionStack.axis = .vertical
-        descriptionStack.spacing = 6
-        descriptionStack.addArrangedSubview(makeInputLabel(text: "Trip Description"))
-        descriptionStack.addArrangedSubview(tripDescriptionView)
+           tripDescriptionView.layer.borderColor = UIColor.systemGray4.cgColor
+           tripDescriptionView.layer.borderWidth = 1
+           tripDescriptionView.layer.cornerRadius = 8
+           tripDescriptionView.text = "Tell us more about the trip"
+           tripDescriptionView.textColor = .placeholderText
+           tripDescriptionView.font = .systemFont(ofSize: 16)
+           tripDescriptionView.delegate = self
+           tripDescriptionView.heightAnchor.constraint(equalToConstant: 100).isActive = true
 
-        nextButton.setTitle("Next", for: .normal)
-        nextButton.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.3)
-        nextButton.setTitleColor(.white, for: .normal)
-        nextButton.layer.cornerRadius = 8
-        nextButton.isEnabled = false
-        nextButton.addTarget(self, action: #selector(nextTapped), for: .touchUpInside)
+           nextButton.setTitle("Next", for: .normal)
+           nextButton.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.3)
+           nextButton.setTitleColor(.white, for: .normal)
+           nextButton.layer.cornerRadius = 8
+           nextButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+           nextButton.isEnabled = false
+           nextButton.addTarget(self, action: #selector(nextTapped), for: .touchUpInside)
 
-        // Add to containerView
-        [closeButton, iconImageView, titleLabel, subtitleLabel, tripNameStack,
-         travelStyleStack, descriptionStack, nextButton].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-            containerView.addSubview($0)
-        }
-    }
+           // Add all arranged subviews
+           [
+               closeButton,
+               iconStack,
+               titleLabel,
+               subtitleLabel,
+               tripNameStack,
+               travelStyleStack,
+               descriptionStack,
+               nextButton
+           ].forEach {
+               $0.translatesAutoresizingMaskIntoConstraints = false
+               mainStackView.addArrangedSubview($0)
+           }
+
+           // Stack contents
+           tripNameStack.axis = .vertical
+           tripNameStack.spacing = 6
+           tripNameStack.addArrangedSubview(makeInputLabel(text: "Trip Name"))
+           tripNameStack.addArrangedSubview(tripNameField)
+
+           travelStyleStack.axis = .vertical
+           travelStyleStack.spacing = 6
+           travelStyleStack.addArrangedSubview(makeInputLabel(text: "Travel Style"))
+           travelStyleStack.addArrangedSubview(travelStyleButton)
+
+           descriptionStack.axis = .vertical
+           descriptionStack.spacing = 6
+           descriptionStack.addArrangedSubview(makeInputLabel(text: "Trip Description"))
+           descriptionStack.addArrangedSubview(tripDescriptionView)
+       }
+
 
     func setupTravelStyleButton() {
         travelStyleButton.setTitle("Select your travel style", for: .normal)
@@ -184,51 +218,13 @@ private extension CreateTripViewController {
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
 
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ])
-
-        NSLayoutConstraint.activate([
-            closeButton.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
-            closeButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
-            closeButton.widthAnchor.constraint(equalToConstant: 24),
-            closeButton.heightAnchor.constraint(equalToConstant: 24),
-
-            iconImageView.topAnchor.constraint(equalTo: closeButton.bottomAnchor, constant: 16),
-            iconImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
-            iconImageView.widthAnchor.constraint(equalToConstant: 44),
-            iconImageView.heightAnchor.constraint(equalToConstant: 44),
-
-            titleLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 16),
-            titleLabel.leadingAnchor.constraint(equalTo: iconImageView.leadingAnchor),
-
-            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
-            subtitleLabel.leadingAnchor.constraint(equalTo: iconImageView.leadingAnchor),
-
-            tripNameStack.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 30),
-            tripNameStack.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
-            tripNameStack.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
-            tripNameField.heightAnchor.constraint(equalToConstant: 44),
-
-            travelStyleStack.topAnchor.constraint(equalTo: tripNameStack.bottomAnchor, constant: 20),
-            travelStyleStack.leadingAnchor.constraint(equalTo: tripNameStack.leadingAnchor),
-            travelStyleStack.trailingAnchor.constraint(equalTo: tripNameStack.trailingAnchor),
-            travelStyleButton.heightAnchor.constraint(equalToConstant: 44),
-
-            descriptionStack.topAnchor.constraint(equalTo: travelStyleStack.bottomAnchor, constant: 20),
-            descriptionStack.leadingAnchor.constraint(equalTo: tripNameStack.leadingAnchor),
-            descriptionStack.trailingAnchor.constraint(equalTo: tripNameStack.trailingAnchor),
-            tripDescriptionView.heightAnchor.constraint(equalToConstant: 100),
-
-            nextButton.topAnchor.constraint(equalTo: descriptionStack.bottomAnchor, constant: 40),
-            nextButton.leadingAnchor.constraint(equalTo: tripNameStack.leadingAnchor),
-            nextButton.trailingAnchor.constraint(equalTo: tripNameStack.trailingAnchor),
-            nextButton.heightAnchor.constraint(equalToConstant: 50),
-            nextButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -40)
+            mainStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            mainStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            mainStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            mainStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -40)
         ])
     }
+
 }
 
 

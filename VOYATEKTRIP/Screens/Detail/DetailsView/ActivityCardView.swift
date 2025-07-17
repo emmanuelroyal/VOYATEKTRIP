@@ -34,8 +34,8 @@ class ActivityCardView: UIView {
 
             let addButton = UIButton(type: .system)
             addButton.setTitle(buttonTitle, for: .normal)
-            addButton.setTitleColor(color, for: .normal)
-            addButton.backgroundColor = .white
+            addButton.setTitleColor(color == UIColor.bgLightBlue ?  UIColor.white : color, for: .normal)
+            addButton.backgroundColor = color == UIColor.bgLightBlue ?  UIColor.appBlue : .white
             addButton.layer.cornerRadius = 6
             addButton.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
             addButton.translatesAutoresizingMaskIntoConstraints = false

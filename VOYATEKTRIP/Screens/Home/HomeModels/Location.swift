@@ -31,6 +31,8 @@ class Location: Identifiable {
         .init(location: "Laghouat, Algeria", city: "Laghouat", initials: "DZ", countryImageUrl: "algeria.flag"),
         .init(location: "Doha, Qatar", city: "Doha", initials: "QA", countryImageUrl: "qatar.flag"),
         .init(location: "Lagos, Nigeria", city: "Lagos", initials: "NG", countryImageUrl: "nigeria.flag"),
-        .init(location: "Muritala Muhammed Airport", city: "Lagos", initials: "NG", countryImageUrl: "nigeria.flag")
+        .init(location: "Laghouat, Algeria", city: "Laghouat", initials: "DZ", countryImageUrl: "algeria.flag"),
+        .init(location: "Doha, Qatar", city: "Doha", initials: "QA", countryImageUrl: "qatar.flag"),
+        .init(location: "Lagos, Nigeria", city: "Lagos", initials: "NG", countryImageUrl: "nigeria.flag")
     ]
 }

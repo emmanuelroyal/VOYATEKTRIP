@@ -8,69 +8,6 @@
 import UIKit
 
 class HomeViewController: UIViewController, CreateTripViewDelegate, TripViewModelDelegate {
-    func didStartLoading() {
-        DispatchQueue.main.async {
-            self.loader.startAnimating()
-            self.view.isUserInteractionEnabled = false
-        }
-    }
-
-    func didFinishLoading() {
-        DispatchQueue.main.async {
-            self.loader.stopAnimating()
-            self.view.isUserInteractionEnabled = true
-        }
-    }
-
-    func didUpdateTrips(_ trips: [TripModel]) {
-        DispatchQueue.main.async {
-            self.trips = trips
-            self.reloadTrips()
-        }
-    }
-
-    fileprivate func cleanUI() {
-        viewModel.trip = TripModel()
-        self.startDateLabel.text = ""
-        self.endDateLabel.text = ""
-        self.selectedCityLabel.text = ""
-        self.enableCreateTrip = false
-        self.setCreateTripBtnEnabled(self.enableCreateTrip)
-    }
-    
-    func didCreateTripSuccessfully(_ trip: TripResponse) {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(
-                title: "Trip Created",
-                message: "Successfully created \(trip.tripName ?? "your trip")",
-                preferredStyle: .alert
-            )
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(alert, animated: true)
-        }
-        cleanUI()
-    }
-
-    func didFailWithError(_ message: String) {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(
-                title: "Error",
-                message: message,
-                preferredStyle: .alert
-            )
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(alert, animated: true)
-        }
-    }
-
-    
-    func getTrip(trip: TripModel?) {
-        if let trip = trip {
-            viewModel.trip = trip
-            viewModel.createTrip()
-        }
-    }
-    
     
     @IBOutlet weak var tripCollectionView: UICollectionView!
     @IBOutlet weak var tripCollectionViewHeightConstraint: NSLayoutConstraint!
@@ -125,7 +62,7 @@ class HomeViewController: UIViewController, CreateTripViewDelegate, TripViewMode
     func showDatePicker(dateType: DateType){
         let datePickerVC = DatePickerViewController()
         datePickerVC.dateType = dateType
-        datePickerVC.initialDate = .now
+        datePickerVC.initialDate = dateType == .start ? .now : viewModel.selectedStartDate
         datePickerVC.onDateSelected = { [weak self] selected in
             
             let formattedDate = self?.formatDate(selected)
@@ -171,7 +108,7 @@ class HomeViewController: UIViewController, CreateTripViewDelegate, TripViewMode
         }
         
         let navController = UINavigationController(rootViewController: selectCityVC)
-        navController.modalPresentationStyle = .pageSheet  // or .formSheet, .fullScreen
+        navController.modalPresentationStyle = .pageSheet
         present(navController, animated: true)
     }
     
@@ -192,14 +129,14 @@ class HomeViewController: UIViewController, CreateTripViewDelegate, TripViewMode
         createTripVC.delegate = self
         
         let navController = UINavigationController(rootViewController: createTripVC)
-        navController.modalPresentationStyle = .pageSheet  // or .formSheet, .fullScreen
+        navController.modalPresentationStyle = .pageSheet  
         present(navController, animated: true)
     }
     
     @objc private func seeTripTapped() {
         let vc = TripDetailViewController()
         let navController = UINavigationController(rootViewController: vc)
-        navController.modalPresentationStyle = .pageSheet  // or .formSheet, .fullScreen
+        navController.modalPresentationStyle = .pageSheet  
         present(navController, animated: true)
     }
     
@@ -216,6 +153,70 @@ class HomeViewController: UIViewController, CreateTripViewDelegate, TripViewMode
         let totalSpacing = CGFloat(max(0, itemCount - 1)) * lineSpacing
         let totalHeight = CGFloat(itemCount) * itemHeight + totalSpacing
         tripCollectionViewHeightConstraint.constant = totalHeight
+    }
+}
+
+extension HomeViewController {
+    func didStartLoading() {
+        DispatchQueue.main.async {
+            self.loader.startAnimating()
+            self.view.isUserInteractionEnabled = false
+        }
+    }
+    
+    func didFinishLoading() {
+        DispatchQueue.main.async {
+            self.loader.stopAnimating()
+            self.view.isUserInteractionEnabled = true
+        }
+    }
+    
+    func didUpdateTrips(_ trips: [TripModel]) {
+        DispatchQueue.main.async {
+            self.trips = trips
+            self.reloadTrips()
+        }
+    }
+    
+    fileprivate func cleanUI() {
+        viewModel.trip = TripModel()
+        self.startDateLabel.text = ""
+        self.endDateLabel.text = ""
+        self.selectedCityLabel.text = ""
+        self.enableCreateTrip = false
+        self.setCreateTripBtnEnabled(self.enableCreateTrip)
+    }
+    
+    func didCreateTripSuccessfully(_ trip: TripResponse) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(
+                title: "Trip Created",
+                message: "Successfully created \(trip.tripName ?? "your trip")",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+        }
+        cleanUI()
+    }
+    
+    func didFailWithError(_ message: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(
+                title: "Error",
+                message: message,
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func getTrip(trip: TripModel?) {
+        if let trip = trip {
+            viewModel.trip = trip
+            viewModel.createTrip()
+        }
     }
 }
 
